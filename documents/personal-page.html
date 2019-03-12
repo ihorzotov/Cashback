@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Document</title>
+    <!-- <link rel="icon" href="" type="image/png"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/personal.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<body class="pagename-personal">
+  <header class="header authorized">
+    <div class="header-sticky">
+      <div class="header-content">
+        <div class="header-content__img">
+          <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <ul class="list-secondary">
+          <li class="header-list-item"><a href="explanations.html">Как пользоваться?</a></li>
+          <li class="header-list-item"><a href="#">О нас</a></li>
+          <li class="header-list-item"><a href="news.html">Новости</a></li>
+          <li class="header-list-item"><a href="questions.html">Ответы</a></li>
+        </ul>
+        <ul class="list-primary">
+          <li class="header-list-item"><a href="#">Магазины</a></li>
+          <li class="header-list-item"><a href="#">Купоны</a></li>
+          <li class="header-list-item"><a href="reviews.html">Отзывы</a></li>
+        </ul>
+        <div class="header-content__search">
+          <span class="button-hover search-button"><i class="fas fa-search"></i></span>
+          <a class="button-hover notifications-button" href="#">
+            <span class="num-counter">22</span>
+            <i class="far fa-bell"></i>
+          </a>
+          <a class="button-hover interesting-button" href="#">
+            <i class="far fa-heart"></i>
+          </a>
+        </div>
+        <div class="header-content__authorized">
+          <span class="account-price"><span class="num">35 000, 88</span> <span class="currensy">грн</span></span>
+        <!-- class icon -->  <a href="#" class="account-logo" style="background-image: url('');"><i class="far fa-user"></i></a>
+          <div class="authorized-dropdown">
+            <div class="authorized-dropdown__wrapper">
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Реферальная сеть</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Кэшбэк-ссылка</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Кабинет</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Покупки</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Переходы</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Транзакции</a></li>
+              </ul>
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Настройки</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Помощь</a></li>
+              </ul>
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Выйти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-content__login">
+          <div class="login-holder">
+            <a href="authentication.html#login">Войти</a>
+            <a href="authentication.html">Зарегистрироваться <i class="far fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-search found"> <!-- found -->
+      <div class="wrapper-center">
+        <div class="form-holder">
+          <form action="" class="modal-form">
+            <input type="text" class="modal-form__input" placeholder="Ищите: магазины, товары, купоны, публикации, ответы">
+            <span class="input-clear">&times;</span>
+          </form>
+        </div>
+        <div class="found-status">
+          <span class="not-found">По вашему запросу ничего не найдено</span>
+          <span class="found">Найдено по вашему запросу:</span>
+        </div>
+        <div class="search-result">
+          <div class="search-result__list">
+            <ul class="search-list header-search__tabs">
+              <li class="search-list__item active" data-quantity="1001" data-target="all">
+                <div class="search-list__bg"></div>
+                <p>Все (<span>1001</span>)</p></li>
+              <li class="search-list__item" data-quantity="1" data-target="shop">
+                <div class="search-list__bg"></div>
+                <p>Магазинов (<span>1</span>)</p></li>
+              <li class="search-list__item" data-quantity="999" data-target="product">
+                <div class="search-list__bg"></div>
+                <p>Товаров (<span>999</span>)</p></li>
+              <li class="search-list__item" data-quantity="99" data-target="coupons">
+                <div class="search-list__bg"></div>
+                <p>Купонов (<span>99</span>)</p></li>
+              <li class="search-list__item" data-quantity="10" data-target="publications">
+                <div class="search-list__bg"></div>
+                <p>Публикаций (<span>10</span>)</p></li>
+              <li class="search-list__item" data-quantity="0" data-target="answers">
+                <div class="search-list__bg"></div>
+                <p>Ответов (<span>0</span>)</p></li>
+            </ul>
+            <div class="search-list-background"></div>
+          </div>
+          <div class="search-result__content js-content__radius">
+            <div class="search-tab active" data-target="all">
+              <div class="search-card">
+                <p class="title">Магазины</p>
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="search-card__amount hot">
+                        <span class="old-amount">до <span>-<span class="value">5,5</span>%</span></span>
+                        <span class="current-amount">-<span class="value">5,5</span>%</span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">В магазин</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-card">
+                <p class="title">Купоны</p>
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-tab" data-target="shop">
+              <div class="search-card">
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/shop2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="search-card__amount hot">
+                        <span class="old-amount">до <span>-<span class="value">5,5</span>%</span></span>
+                        <span class="current-amount">-<span class="value">5,5</span>%</span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">В магазин</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-tab" data-target="product">
+            </div>
+            <div class="search-tab" data-target="coupons">
+            </div>
+            <div class="search-tab" data-target="publications">
+            </div>
+            <div class="search-tab" data-target="answers">
+            </div>
+            <div class="show-more">
+              <button class="show-more__btn">Показать еще</button>
+            </div>
+            <div class="loading">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="wrapper">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+        <li class="breadcrumbs__item">Личный кабинет</li>
+      </ul>
+      <div class="section-title section-title--text-left">
+        <h2 class="section-title__text">Личный кабинет</h2>
+      </div>
+      <div class="account-content">
+        <div class="account-content__left">
+          <div class="wrap-drop">
+            <div class="selected-el"><span></span></div>
+            <ul class="drop">
+                <li class="selected"><div class="drop__element"><p class="num">4050 3267 7811 4371</p> <p class="currensy">EUR</p></div></li>
+                <li><div class="drop__element"><p class="num">4050 3267 7811 4371</p> <p class="currensy">EUR</p></div></li>
+                <li><div class="drop__element"><p class="num">4050 3267 7811 4371</p> <p class="currensy">EUR</p></div></li>
+                <li><div class="drop__element"><p class="num">4050 3267 7811 4371</p> <p class="currensy">EUR</p></div></li>
+                <li><div class="drop__element"><p class="num">4050 3267 7811 4371</p> <p class="currensy">EUR</p></div></li>
+            </ul>
+          </div>
+          <div class="money-infer">
+            <div class="money-infer__value">
+              <p class="title">Баланс:</p>
+              <span class="num">3 249<span class="penny">.88</span></span>
+            </div>
+            <button class="money-infer__button btn-blue">Вывести</button> <!--  disabled -->
+          </div>
+          <div class="transaction-block">
+            <div class="transaction-block__content">
+              <p class="title">Ожидает начисления:</p>
+              <span class="num">525.16</span>
+            </div>
+            <div class="transaction-block__content">
+              <p class="title">Всего получено:</p>
+              <span class="num">3 999.37</span>
+            </div>
+          </div>
+        </div>
+        <div class="account-content__right">
+          <div class="account-person">
+            <div class="account-person__img" style="background-image: url('../img/account-person__bg.png');"></div>
+            <div class="account-person__info">
+              <span class="name">Алина Петрова</span>
+              <p class="id">ID: 156987</p>
+            </div>
+          </div>
+          <div class="account-settings">
+            <div class="account-settings__block"><a href="#"><i class="fas fa-cog"></i></a></div>
+            <div class="account-settings__block"><a href="#"><i>?</i></a></div>
+            <div class="account-settings__block"><a href="#"><i class="fas fa-sign-out-alt"></i></a></div>
+          </div>
+          <div class="account-info">
+            <div class="account-info__status">
+              <div class="status-block status-block__middle"> <!-- status-block__junior , status-block__pro -->
+                <div class="status-block__text">
+                  <span>+</span><span class="num">20</span><span>%</span>
+                </div>
+              </div>
+              <div class="account-info__text status-element">
+                <p class="title">Middle статус</p>
+                  <span class="num">+20%</span>
+                  <span class="text">бонус</span>
+              </div>
+            </div>
+            <div class="account-info__value">
+              <div class="account-info__text">
+                <span class="text">Копилосики:</span>
+                <span class="num">1500</span>
+              </div>
+            </div>
+            <div class="account-info__purchases">
+              <div class="account-info__text">
+                <span class="text">Покупок:</span>
+                <span class="num">28</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="personal-page__tabs">
+        <div class="search-result__list">
+          <ul class="search-list">
+            <li class="search-list__item active">
+              <div class="search-list__bg"></div>
+              <div class="dropdown-tab">
+                <ul class="dropdown-tab__list">
+                  <li class="dropdown-tab__item js-search-button active" data-target="referal">Реферальная сеть</li>
+                  <li class="dropdown-tab__item js-search-button" data-target="cashback">Кэшбэк-ссылка</li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-list__item" >
+              <div class="search-list__bg"></div>
+              <p class="js-search-button" data-target="personal">Кабинет (<span>1</span>)</p></li>
+            <li class="search-list__item">
+              <div class="search-list__bg"></div>
+              <div class="dropdown-tab">
+                <ul class="dropdown-tab__list">
+                  <li class="dropdown-tab__item js-search-button active" data-target="purchases">Покупки</li>
+                  <li class="dropdown-tab__item js-search-button" data-target="blank">Переходы</li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-list__item">
+              <div class="search-list__bg"></div>
+              <p class="js-search-button" data-target="transactions">Транзакции</p></li>
+          </ul>
+          <div class="search-list-background"></div>
+        </div>
+      </div>
+      <div class="page-content" data-target="referal"> <!-- new-user -->
+        <p class="element-title">Приглашайте друзей</p>
+        <div class="page-content__block">
+          <div class="friends-block">
+            <div class="friends-block__content">
+              <div class="friends-block__large">
+                <div class="text-block">
+                  <p class="title">Ожидаемый доход:</p>
+                  <span class="num">201.02<span class="text">грн</span></span>
+                </div>
+                <div class="text-block">
+                  <p class="title">Покупки:</p>
+                  <span class="num">28<span class="text">шт</span></span>
+                </div>
+              </div>
+              <div class="friends-block__middle">
+                <div class="text-block">
+                  <p class="title">Доход от друзей:</p>
+                  <span class="num">7 603.23<span class="text">грн</span></span>
+                </div>
+              </div>
+              <div class="friends-block__large friends-block--right">
+                <div class="text-block">
+                  <p class="title">Всего друзей:</p>
+                  <span class="num">34<span class="text">чел</span></span>
+                </div>
+                <div class="text-block">
+                  <p class="title">Активных друзей:</p>
+                  <span class="num">27<span class="text">чел</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="element-title element-title--simple element-title--margin-top">Скопируйте и отправьте друзьям</p>
+          <div class="link-copy">
+            <label class="profile-setings__label js-input--link" for="">
+              <input type="text" name="modal-name" value="https://kush.com/soc/sh-1?r=6853438" disabled>
+              <button class="copy-button js-copy"><i class="far fa-copy"></i></button>
+            </label>
+            <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+          </div>
+          <p class="element-title element-title--simple">Выберите шаблон для соцсетей</p>
+          <div class="social-template">
+            <div class="search-result__list">
+              <button class="search-list__arrow search-list__left"><</button>
+              <div class="search-list">
+                <div class="search-list__item active">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='clothes'>Одежда</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='shoes'>Обувь (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='equipment'>Техника (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='travel'>Путешествия (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='phones'>Путешествия (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='other'>Путешествия (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='equipment1'>Техника (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='travel1'>Путешествия (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg"></div>
+                  <p class="js-search-button" data-target='phones1'>Путешествия (<span>1</span>)</p>
+                </div>
+                <div class="search-list__item">
+                  <div class="search-list__bg" data-target='other1'></div>
+                  <p class="js-search-button">Путешествия (<span>1</span>)</p>
+                </div>
+              </div>
+              <button class="search-list__arrow search-list__right"><</button>
+              <div class="search-list-background"></div>
+            </div>
+          </div>
+          <div class="template-element active" data-target="clothes">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="shoes">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="equipment">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="travel">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="phones">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="other">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="equipment1">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label " for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label " for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="travel1">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label " for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label " for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="phones1">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="template-element" data-target="other1">
+            <div class="template-element__slider">
+              <div class="slider-element" style="background-image: url('../img/slider-el1.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el3.png');"></div>
+              <div class="slider-element" style="background-image: url('../img/slider-el2.png');"></div>
+            </div>
+            <div class="template-element__content">
+              <div class="template-element__fields">
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Заголовок</p>
+                  <textarea name="" class="textarea-small">Покупай телефоны через Кэшбэк кэшбэк. Получай обратно до 5%.</textarea>
+                </label>
+                <label class="profile-setings__label" for="">
+                  <p class="label-title">Текст</p>
+                  <textarea name="" class="textarea-large">Рекомендую сервис, который возвращает часть денег с каждой покупки, практически в любом интернет-магазине.</textarea>
+                </label>
+              </div>
+              <p class="title">Поделиться через:</p>
+              <div class="template-element__links">
+                <a href="#" class="link-copy-social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="link-copy-social"><i class="fab fa-vk"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="element-title element-title--simple">Партнерская ставка</p>
+          <p class="element-title__text">Приглашайте больше друзей/партнеров, зарабытывайте больше. Каждый активный друг увеличивает Вашу процентную ставку. </p>
+          <div class="schedule"> <!-- schedule-simple -->
+            <div class="schedule__container">
+              <div class="container-angle">
+                <div class="container-angle__line"></div>
+                <div class="schedule-element__number" data-target='1'><span class="number">5</span>%</div>
+                <div class="schedule-element__number" data-target='2'><span class="number">10</span>%</div>
+                <div class="schedule-element__number" data-target='3'><span class="number">20</span>%</div>
+                <div class="schedule-element__number" data-target='4'><span class="number">30</span>%</div>
+                <div class="schedule-element__number" data-target='5'><span class="number">40</span>%</div>
+              </div>
+              <div class="schedule-element" data-target='1'>
+                <span class="num">1</span>
+              </div>
+              <div class="schedule-element" data-target='2'>
+                <span class="num">5</span>
+              </div>
+              <div class="schedule-element " data-target='3'>
+                <span class="num">15</span>
+              </div>
+              <div class="schedule-element active" data-target='4'>
+                <span class="num">25</span>
+              </div>
+              <div class="schedule-element " data-target='5'>
+                <span class="num">50</span>
+              </div>
+              <div class="current-step">
+                <div class="current-step__arrow">
+                  <p class="text"><span class="num-js">35</span>  <span class="person">человек</span></p>
+                </div>
+              </div>
+              <span class="schedule-zero">0</span>
+              <span class="schedule-line__text">Активные друзья, чел</span>
+            </div>
+          </div>
+          <div class="hero-block">
+            <img src="../img/friends.svg" alt="">
+            <div class="hero-block__text">
+              <p class="text">Получайте <b>500 грн</b> за каждого нового активного друга! Чем больше друзей - тем выше доход от их кэшбэка.</p>
+              <p class="text-light">Скопируйте и отправьте реферальную ссылку друзьям. Вы получите процент от каждого кэшбэка пользователя, который зарегистрировался по вашей ссылке.</p>
+            </div>
+          </div>
+          <p class="element-title element-title--simple element-title--margin">Статистика друзей</p>
+        </div>
+        <div class="friends-statistics">
+          <span class="no-friends">У вас пока нет друзей</span>
+          <ul class="friends-statistics__tabs">
+            <li class="tabs-item active" data-target="all-friends">Все друзья</li>
+            <li class="tabs-item " data-target="active-friends">Активные друзья</li>
+            <li class="tabs-item " data-target="invited-friends">Приглашенные друзья</li>
+          </ul>
+          <div class="friends-statistics__block active" data-target="all-friends">
+            <div class="friends-statistics__card intensive">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+          </div>
+          <div class="friends-statistics__block" data-target="active-friends">
+            <div class="friends-statistics__card intensive">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card intensive">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+          </div>
+          <div class="friends-statistics__block" data-target="invited-friends">
+            <div class="friends-statistics__card intensive">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card intensive">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card intensive">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+            <div class="friends-statistics__card">
+              <div class="card-info">
+                <div class="card-info__img" style="background-image: url('../img/account-person__bg.png');"></div>
+                <div class="card-info__text">
+                  <span class="name">Андрей Ганин</span>
+                  <a href="mailto:andrey@mail.com" class="mail">andrey@mail.com</a>
+                </div>
+              </div>
+              <p class="text">Доход:<span class="num">7 178.12</span> <span class="currensy"> грн</span></p>
+              <p class="text">В ожидании:<span class="num">217 178.12</span> <span class="currensy"> грн</span></p>
+            </div>
+          </div>
+        </div>
+        <button class="standart-btn ajax-show__more">Показать больше</button>
+        <ul class="pagination">
+          <li class="pagination-arrow left"><a href="#"><i class="fas fa-angle-left"></i></a></li>
+          <li class="pagination__item active"><a href="#">1</a></li>
+          <li class="pagination__item"><a href="#">2</a></li>
+          <li class="pagination__item"><a href="#">3</a></li>
+          <li class="pagination__item"><a href="#">4</a></li>
+          <li class="pagination__item"><a href="#">5</a></li>
+          <li class="pagination__item">...</li>
+          <li class="pagination__item"><a href="#">256</a></li>
+          <li class="pagination-arrow right"><a href="#"><i class="fas fa-angle-right"></i></a></li>
+        </ul>
+      </div>
+      <div class="page-content active" data-target="personal">
+        <p class="element-title">Уведомления (<span class="notifications__counter">1</span>)</p>
+        <div class="page-content__notifications">
+          <div class="notifications-block new-notification">
+            <p class="text">Начислен кэшбэк 28.10 грн по заказу №6385 от магазина Рослинка</p>
+            <p class="date">12.09.2018, 15:05</p>
+          </div>
+          <div class="notifications-block new-notification">
+            <p class="text">Начислен кэшбэк 28.10 грн по заказу №6385 от магазина Рослинка</p>
+            <p class="date">12.09.2018, 15:05</p>
+          </div>
+          <div class="notifications-block">
+            <p class="text">Начислен кэшбэк 28.10 грн по заказу №6385 от магазина Рослинка</p>
+            <p class="date">12.09.2018, 15:05</p>
+          </div>
+          <div class="notifications-block">
+            <p class="text">Начислен кэшбэк 28.10 грн по заказу №6385 от магазина Рослинка</p>
+            <p class="date">12.09.2018, 15:05</p>
+          </div>
+          <div class="notifications-block">
+            <p class="text">Начислен кэшбэк 28.10 грн по заказу №6385 от магазина Рослинка</p>
+            <p class="date">12.09.2018, 15:05</p>
+          </div>
+          <div class="notifications-block">
+            <p class="text">Начислен кэшбэк 28.10 грн по заказу №6385 от магазина Рослинка</p>
+            <p class="date">12.09.2018, 15:05</p>
+          </div>
+        </div>
+        <p class="element-title">Статус</p>
+        <div class="current-status">
+          <div class="current-status__line">
+            <p class="js-current-num">250</p>
+            <div class="absolute-block">
+              <p class="title">Осталось</p>
+              <p class="js-left-num"></p>
+            </div>
+          </div>
+          <div class="current-status__chevron js-chevron ">
+            <div class="status-block status-block__junior">
+              <div class="status-block__text">
+                <span>+</span><span class="num">20</span><span>%</span>
+              </div>
+              <div class="status-block__info">
+                <p class="text">Junior</p>
+                <span class="num chevron-num">250</span>
+                <span class="currency">грн</span>
+              </div>
+            </div>
+          </div>
+          <div class="current-status__chevron js-chevron active">
+            <div class="status-block status-block__middle">
+              <div class="status-block__text">
+                <span>+</span><span class="num">20</span><span>%</span>
+              </div>
+              <div class="status-block__info">
+                <p class="text">Middle</p>
+                <span class="num chevron-num">1500</span>
+                <span class="currency">грн</span>
+              </div>
+            </div>
+          </div>
+          <div class="current-status__chevron js-chevron">
+            <div class="status-block status-block__pro">
+              <div class="status-block__text">
+                <span>+</span><span class="num">20</span><span>%</span>
+              </div>
+              <div class="status-block__info">
+                <p class="text">Pro</p>
+                <span class="num chevron-num">4500</span>
+                <span class="currency">грн</span>
+              </div>
+            </div>
+          </div>
+          <div class="current-status__text">
+            <p class="text">У вас действует <b>базовая ставка</b> кэшбэка. Отправляйтесь за покупками, чтобы накопить 250 грн. кэшбэка и получить статус. Ваша ставка вырастет на 10% от базовой!
+              <br/>
+              <br/>
+            При выводе средств с кэшбэк-счета ваш статус не снизится. Заметьте, активные коды не суммируются со ставкой вашего статуса. Всегда действует что-то одно, что дает вам большую ставку кэшбэка.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-content" data-target="purchases">
+        <p class="element-title element-title--margin__bottom">История покупок</p>
+        <div class="date-picker">
+          <input type="text" class="date-picker__el date-picker__from active" name="from">
+          <span class="spacer">-</span>
+          <input type="text" class="date-picker__el date-picker__to" name="to">
+        </div>
+        <table class="page-table page-table--search" class=" dataTable " style="width: 100%;">
+          <thead>
+            <tr role="row" class="page-table__head">
+              <th class="no-sort" style="width: 17%;">Магазин</th>
+              <th class="sorting" style="width: 12.4%;"><span class="sorting-title">Заказ</span></th>
+              <th class="sorting" style="width: 14.2%;"><span class="sorting-title">Дата</span></th>
+              <th class="sorting" style="width: 16%"><span class="sorting-title">Сумма</span></th>
+              <th class="no-sort" style="width: 14.2%;"> 
+                <div class="wrap-drop sortable-list"  style="width: 118px; margin-left: -20px;">
+                  <div class="selected-el"><span><a>Валюта</a></span></div>
+                  <ul class="drop">
+                      <li class="selected" data-sort='null'><a>Валюта</a></li>
+                      <li data-sort="eur"><a>EUR</a></li>
+                      <li data-sort="rub"><a>RUB</a></li>
+                      <li data-sort="btc"><a>BTC</a></li>
+                      <li data-sort="uah"><a>UAH</a></li>
+                  </ul>
+                </div>
+              </th>
+              <th class="sorting" style="width: 14.2%;"><span class="sorting-title">Кэшбэк</span></th>
+              <th class="no-sort" style="width: 12%;">
+                <div class="wrap-drop wrap-drop--absolute sortable-list">
+                  <div class="selected-el dt-right"><span><a></a></span></div>
+                  <ul class="drop">
+                    <li class="selected" data-status='null'><a>Статус</a></li>
+                    <li data-status="process"><a>В обработке</a></li>
+                    <li data-status="confirmed"><a>Подтвержден</a></li>
+                    <li data-status="canceled"><a>Отменен</a></li>
+                  </ul>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr role="row" class="page-table__row" data-sort="rub"  data-status="confirmed">
+              <td><img src="../img/shop1.png" alt=""><span class="shop-name shop-name--hidden">room guru</span></td>
+              <td>6833</td>
+              <td> 12.09.2018</td>
+              <td> 944.00</td>
+              <td>RUB</td>
+              <td>200</td>
+              <td class="dt-right table-green">Подтвержден</td>
+            </tr>
+            <tr role="row" class="page-table__row" data-sort="uah"  data-status="process">
+              <td><img src="../img/shop2.png" alt=""><span class="shop-name shop-name--hidden">aliexpress</span></td>
+              <td>6833</td>
+              <td> 12.09.2018</td>
+              <td> 944.00</td>
+              <td>UAH</td>
+              <td>200</td>
+              <td class="dt-right table-standart">В обработке</td>
+            </tr>
+            <tr role="row" class="page-table__row" data-sort="btc"  data-status="process">
+              <td><img src="../img/shop3.png" alt=""><span class="shop-name shop-name--hidden">adidas</span></td>
+              <td>6833</td>
+              <td> 12.09.2018</td>
+              <td> 944.00</td>
+              <td>BTC</td>
+              <td>200</td>
+              <td class="dt-right table-standart">В обработке</td>
+            </tr>
+            <tr role="row" class="page-table__row" data-sort='eur' data-status="canceled">
+              <td><img src="../img/shop2.png" alt=""><span class="shop-name shop-name--hidden">aliexpress</span></td>
+              <td>6822</td>
+              <td>13.09.2018</td>
+              <td> 500.00</td>
+              <td>EUR</td>
+              <td>130</td>
+              <td class="dt-right table-red">Отменен</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="standart-btn ajax-show__more">Показать больше</button>
+        <ul class="pagination">
+          <li class="pagination-arrow left"><a href="#"><i class="fas fa-angle-left"></i></a></li>
+          <li class="pagination__item active"><a href="#">1</a></li>
+          <li class="pagination__item"><a href="#">2</a></li>
+          <li class="pagination__item"><a href="#">3</a></li>
+          <li class="pagination__item"><a href="#">4</a></li>
+          <li class="pagination__item"><a href="#">5</a></li>
+          <li class="pagination__item">...</li>
+          <li class="pagination__item"><a href="#">256</a></li>
+          <li class="pagination-arrow right"><a href="#"><i class="fas fa-angle-right"></i></a></li>
+        </ul>
+      </div>
+      <div class="page-content" data-target="transactions">
+        <p class="element-title">Движение по счету</p>
+        <div class="infer-container">
+          <div class="purse-card">
+            <div class="purse-card__container">
+              <div class="purse-card__top">
+                <span class="currency">RUB</span>
+                <span class="number">2654 2639 8956 2658</span>
+              </div>
+              <div class="purse-card__bottom">
+                <span class="title">Баланс:</span>
+                <span class="value">2 256.66</span>
+                <span class="currency">руб</span>
+              </div>
+            </div>
+          </div>
+          <div class="purse-card">
+            <div class="purse-card__container">
+              <div class="purse-card__top">
+                <span class="currency">RUB</span>
+                <span class="number">2654 2639 8956 2658</span>
+              </div>
+              <div class="purse-card__bottom">
+                <span class="title">Баланс:</span>
+                <span class="value">2 256.66</span>
+                <span class="currency">руб</span>
+              </div>
+            </div>
+          </div>
+          <div class="purse-card active">
+            <div class="purse-card__container">
+              <div class="purse-card__top">
+                <span class="currency">RUB</span>
+                <span class="number">2654 2639 8956 2658</span>
+              </div>
+              <div class="purse-card__bottom">
+                <span class="title">Баланс:</span>
+                <span class="value">2 256.66</span>
+                <span class="currency">руб</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="date-picker date-picker--margin">
+          <input type="text" class="date-picker__el date-picker__from active" name="from">
+          <span class="spacer">-</span>
+          <input type="text" class="date-picker__el date-picker__to" name="to">
+        </div>
+        <table class="page-table page-table--dropdown" class=" dataTable " style="width: 100%;">
+          <thead>
+            <tr role="row" class="page-table__head">
+              <th class="sorting" style="width: 180px;"><span class="sorting-title">Дата</span></th>
+              <th class="no-sort" style="width: 57.2%;">Описание</th>
+              <th class="sorting" style="width: 12.3%"><span class="sorting-title">Сумма</span></th>
+              <th class="no-sort dt-right" style="width: 14.1%;">Кэшбэк</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr role="row" class="page-table__row">
+              <td> 12.09.2018</td>
+              <td>
+                <span>Начислен кэшбэк по заказу №6358</span>
+                <div class="page-table__dropdown">
+                  <div class="dropdown-text">
+                    <span class="title">Получатель:</span>
+                    <span class="text">Мария Андреева</span>
+                  </div>
+                  <div class="dropdown-text">
+                    <span class="title">Номер карты:</span>
+                    <span class="text">2658 6987 2588 6987</span>
+                  </div>
+                </div>
+              </td>
+              <td class="table-green">288.50</td>
+              <td class="dt-right dt-arrow">3 249.88</td>
+            </tr>
+            <tr role="row" class="page-table__row">
+              <td> 12.09.2018</td>
+              <td>
+                <span>Начислен кэшбэк за Марию Андрееву по заказу №6358</span>
+                <div class="page-table__dropdown">
+                  <div class="dropdown-text">
+                    <span class="title">Получатель:</span>
+                    <span class="text">Мария Андреева</span>
+                  </div>
+                  <div class="dropdown-text">
+                    <span class="title">Номер карты:</span>
+                    <span class="text">2658 6987 2588 6987</span>
+                  </div>
+                </div>
+              </td>
+              <td class="table-green">288.50</td>
+              <td class="dt-right dt-arrow">3 249.88</td>
+            </tr>
+            <tr role="row" class="page-table__row">
+              <td> 12.09.2018</td>
+              <td>
+                <span>Выведен кэшбэк на карту Visa</span>
+                <div class="page-table__dropdown">
+                  <div class="dropdown-text">
+                    <span class="title">Получатель:</span>
+                    <span class="text">Мария Андреева</span>
+                  </div>
+                  <div class="dropdown-text">
+                    <span class="title">Номер карты:</span>
+                    <span class="text">2658 6987 2588 6987</span>
+                  </div>
+                </div>
+              </td>
+              <td class="table-red">-10 288.50</td>
+              <td class="dt-right dt-arrow">3 249.88</td>
+            </tr>
+            <tr role="row" class="page-table__row">
+              <td>13.09.2018</td>
+              <td>
+                <span>Начислено за нового активного друга Марию Андрееву</span>
+                <div class="page-table__dropdown">
+                  <div class="dropdown-text">
+                    <span class="title">Получатель:</span>
+                    <span class="text">Мария Андреева</span>
+                  </div>
+                  <div class="dropdown-text">
+                    <span class="title">Номер карты:</span>
+                    <span class="text">2658 6987 2588 6987</span>
+                  </div>
+                </div>
+              </td>
+              <td class="table-green">500</td>
+              <td class="dt-right dt-arrow">3 249.88</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="standart-btn ajax-show__more">Показать больше</button>
+        <ul class="pagination">
+          <li class="pagination-arrow left"><a href="#"><i class="fas fa-angle-left"></i></a></li>
+          <li class="pagination__item active"><a href="#">1</a></li>
+          <li class="pagination__item"><a href="#">2</a></li>
+          <li class="pagination__item"><a href="#">3</a></li>
+          <li class="pagination__item"><a href="#">4</a></li>
+          <li class="pagination__item"><a href="#">5</a></li>
+          <li class="pagination__item">...</li>
+          <li class="pagination__item"><a href="#">256</a></li>
+          <li class="pagination-arrow right"><a href="#"><i class="fas fa-angle-right"></i></a></li>
+        </ul>
+      </div>
+      <div class="page-content" data-target="cashback">
+        <p class="element-title">Создайте кэшбэк-ссылку</p>
+        <p class="element-title__text">Создавайте свои <b>кэшбэк-ссылки</b> на товары или магазины, размещайте их где угодно и получайте <b>весь кэшбэк</b> за покупки с них.</p>
+        <div class="referal-section">
+          <div class="instruction__block">
+            <div class="instruction-card">
+              <div class="instruction-card__title">
+                <p class="title">Сгенерировать</p>
+              </div>
+              <div class="instruction-card__img">
+                <div class="img-aligner">
+                  <img src="../img/cursor.png" alt="">
+                </div>
+              </div>
+              <div class="instruction-card__text">
+                <p class="text">Создайте ссылку на любой магазин и товар</p>
+              </div>
+            </div>
+            <div class="instruction-card">
+              <div class="instruction-card__title">
+                <p class="title">Поделиться</p>
+              </div>
+              <div class="instruction-card__img">
+                <div class="img-aligner">
+                  <img src="../img/rupor.png" alt="">
+                </div>
+              </div>
+              <div class="instruction-card__text">
+                <p class="text">Делитись со своими друзьями и знакомыми</p>
+              </div>
+            </div>
+            <div class="instruction-card">
+              <div class="instruction-card__title">
+                <p class="title">Получать кэшбэк</p>
+              </div>
+              <div class="instruction-card__img">
+                <div class="img-aligner">
+                  <img src="../img/walet.png" alt="">
+                </div>
+              </div>
+              <div class="instruction-card__text">
+                <p class="text">Получайте весь кэшбэк   с их покупок</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="element-title element-title--simple">Создайте кэшбэк-ссылку</p>
+        <div class="partner-block">
+          <label class="profile-setings__label label--large__width" for="">
+            <input type="text" name="modal-name" placeholder="Вставьте ссылку на магазин или товар">
+          </label>
+          <button class="standart-btn">Создать</button>
+        </div>
+        <p class="element-title element-title--simple">Правила использования кэшбэк-ссылки</p>
+        <div class="questions-content simple">
+          <div class="spoiler active">
+            <div class="spoiler__content">
+              <p>Вывод средств с разных аккаунтов на одинаковые реквизиты невозможен</p>
+            </div>
+          </div>
+          <div class="spoiler active">
+            <div class="spoiler__content">
+              <p>Минимальная сумма вывода 250 грн</p>
+            </div>
+          </div>
+          <div class="spoiler active">
+            <div class="spoiler__content">
+              <p>Указывайте только реальные, зарегистрированные данные</p>
+            </div>
+          </div>
+          <div class="spoiler active">
+            <div class="spoiler__content">
+              <p>Ваша заявка будет обработана в течение 1-3 рабочих дней</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-content" data-target="blank">
+        <p class="element-title element-title--margin__bottom">История переходов</p>
+        <div class="date-picker">
+          <input type="text" class="date-picker__el date-picker__from active" name="from">
+          <span class="spacer">-</span>
+          <input type="text" class="date-picker__el date-picker__to" name="to">
+        </div>
+        <table class="page-table page-table--search" class=" dataTable " style="width: 100%;">
+          <thead>
+            <tr role="row" class="page-table__head">
+              <th class="no-sort" style="width: 82%;">Магазин</th>
+              <th class="no-sort" style="width: 10.5%;">Время</th>
+              <th class="no-sort dt-right" style="width: 7.3%;">Дата</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr role="row" class="page-table__row" data-sort="rub"  data-status="confirmed">
+              <td><img src="../img/shop1.png" alt=""><span class="shop-name">room guru</span></td>
+              <td>17:25</td>
+              <td class="dt-right">12.09.2018</td>
+            </tr>
+            <tr role="row" class="page-table__row" data-sort="uah"  data-status="process">
+              <td><img src="../img/shop2.png" alt=""><span class="shop-name">aliexpress</span></td>
+              <td>17:24</td>
+              <td class="dt-right">12.09.2018</td>
+            </tr>
+            <tr role="row" class="page-table__row" data-sort="btc"  data-status="process">
+              <td><img src="../img/shop3.png" alt=""><span class="shop-name">adidas</span></td>
+              <td>17:23</td>
+              <td class="dt-right">12.09.2018</td>
+            </tr>
+            <tr role="row" class="page-table__row" data-sort='eur' data-status="canceled">
+              <td><img src="../img/shop2.png" alt=""><span class="shop-name">aliexpress</span></td>
+              <td>17:22</td>
+              <td class="dt-right">13.09.2018</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="standart-btn ajax-show__more">Показать больше</button>
+        <ul class="pagination">
+          <li class="pagination-arrow left"><a href="#"><i class="fas fa-angle-left"></i></a></li>
+          <li class="pagination__item active"><a href="#">1</a></li>
+          <li class="pagination__item"><a href="#">2</a></li>
+          <li class="pagination__item"><a href="#">3</a></li>
+          <li class="pagination__item"><a href="#">4</a></li>
+          <li class="pagination__item"><a href="#">5</a></li>
+          <li class="pagination__item">...</li>
+          <li class="pagination__item"><a href="#">256</a></li>
+          <li class="pagination-arrow right"><a href="#"><i class="fas fa-angle-right"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrapper-center">
+      <div class="footer-content">
+        <span class="title">Покупателю</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item"><a href="#">Реферальная программа</a></li>
+          <li class="footer-content__item"><a href="#">Программа лояльности</a></li>
+          <li class="footer-content__item"><a href="#">Правила покупки с кэшбэком</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Магазинам</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase"><a href="#">Добавить магазин</a></li>
+          <li class="footer-content__item"><a href="#">Партнерская программа</a></li>
+          <li class="footer-content__item"><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Новости</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase">Следить за акциями</li>
+          <li class="footer-content__item">
+            <ul class="social-list">
+              <li class="social-list__item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="social-list__item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="social-list__item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Поддержка</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase"><a href="#">Написать в техподдержку</a></li>
+          <li class="footer-content__item"><a href="mailto:#">kush@help.com</a></li>
+          <li class="footer-content__item"><a href="tel:#">0 (800) 400 30 70 </a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/datetime.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/account.js"></script>
+ 
+</body>
+</html>
+

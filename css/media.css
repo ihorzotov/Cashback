@@ -1,0 +1,32 @@
+@media (min-width: 1025px) {
+  .spoiler:hover:after, .spoiler:hover .title {
+    color: #21b5d5;
+  }
+  .modal-form--min:hover {
+    background-color: #fff;
+  }
+  .pagination__item:hover {
+    color: #21b5d5;
+  }
+  .aside-list__item:hover .alphabet-holder {
+    margin-top: 28px;
+    transition-delay: 0s;
+  }
+  .aside-list__item:hover .alphabet, .aside-list__item:hover .alphabet-holder {
+    max-height: 40px;
+  }
+  .button-hover:hover:before {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  .header-content__authorized:hover {
+    background: #56cde7;
+  }
+  .header-content__authorized.active:hover {
+    background: #9fe3f3;
+  }
+  .cards-block__item:hover:before {
+    left: 0;
+    width: 100%;
+  }
+}

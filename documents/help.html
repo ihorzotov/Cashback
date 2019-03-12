@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Document</title>
+    <!-- <link rel="icon" href="" type="image/png"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+</head>
+<body class="pagename-help">
+  <header class="header authorized">
+    <div class="header-sticky">
+      <div class="header-content">
+        <div class="header-content__img">
+          <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <ul class="list-secondary">
+          <li class="header-list-item"><a href="explanations.html">Как пользоваться?</a></li>
+          <li class="header-list-item"><a href="#">О нас</a></li>
+          <li class="header-list-item"><a href="news.html">Новости</a></li>
+          <li class="header-list-item"><a href="questions.html">Ответы</a></li>
+        </ul>
+        <ul class="list-primary">
+          <li class="header-list-item"><a href="#">Магазины</a></li>
+          <li class="header-list-item"><a href="#">Купоны</a></li>
+          <li class="header-list-item"><a href="reviews.html">Отзывы</a></li>
+        </ul>
+        <div class="header-content__search">
+          <span class="button-hover search-button"><i class="fas fa-search"></i></span>
+          <a class="button-hover notifications-button" href="#">
+            <span class="num-counter">22</span>
+            <i class="far fa-bell"></i>
+          </a>
+          <a class="button-hover interesting-button" href="#">
+            <i class="far fa-heart"></i>
+          </a>
+        </div>
+        <div class="header-content__authorized">
+          <span class="account-price"><span class="num">35 000, 88</span> <span class="currensy">грн</span></span>
+        <!-- class icon -->  <a href="#" class="account-logo" style="background-image: url('');"><i class="far fa-user"></i></a>
+          <div class="authorized-dropdown">
+            <div class="authorized-dropdown__wrapper">
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Реферальная сеть</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Кэшбэк-ссылка</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Кабинет</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Покупки</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Переходы</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Транзакции</a></li>
+              </ul>
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Настройки</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Помощь</a></li>
+              </ul>
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Выйти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-content__login">
+          <div class="login-holder">
+            <a href="authentication.html#login">Войти</a>
+            <a href="authentication.html">Зарегистрироваться <i class="far fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-search found"> <!-- found -->
+      <div class="wrapper-center">
+        <div class="form-holder">
+          <form action="" class="modal-form">
+            <input type="text" class="modal-form__input" placeholder="Ищите: магазины, товары, купоны, публикации, ответы">
+            <span class="input-clear">&times;</span>
+          </form>
+        </div>
+        <div class="found-status">
+          <span class="not-found">По вашему запросу ничего не найдено</span>
+          <span class="found">Найдено по вашему запросу:</span>
+        </div>
+        <div class="search-result">
+          <div class="search-result__list">
+            <ul class="search-list header-search__tabs">
+              <li class="search-list__item active" data-quantity="1001" data-target="all">
+                <div class="search-list__bg"></div>
+                <p>Все (<span>1001</span>)</p></li>
+              <li class="search-list__item" data-quantity="1" data-target="shop">
+                <div class="search-list__bg"></div>
+                <p>Магазинов (<span>1</span>)</p></li>
+              <li class="search-list__item" data-quantity="999" data-target="product">
+                <div class="search-list__bg"></div>
+                <p>Товаров (<span>999</span>)</p></li>
+              <li class="search-list__item" data-quantity="99" data-target="coupons">
+                <div class="search-list__bg"></div>
+                <p>Купонов (<span>99</span>)</p></li>
+              <li class="search-list__item" data-quantity="10" data-target="publications">
+                <div class="search-list__bg"></div>
+                <p>Публикаций (<span>10</span>)</p></li>
+              <li class="search-list__item" data-quantity="0" data-target="answers">
+                <div class="search-list__bg"></div>
+                <p>Ответов (<span>0</span>)</p></li>
+            </ul>
+            <div class="search-list-background"></div>
+          </div>
+          <div class="search-result__content js-content__radius">
+            <div class="search-tab active" data-target="all">
+              <div class="search-card">
+                <p class="title">Магазины</p>
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="search-card__amount hot">
+                        <span class="old-amount">до <span>-<span class="value">5,5</span>%</span></span>
+                        <span class="current-amount">-<span class="value">5,5</span>%</span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">В магазин</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-card">
+                <p class="title">Купоны</p>
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-tab" data-target="shop">
+              <div class="search-card">
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/shop2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="search-card__amount hot">
+                        <span class="old-amount">до <span>-<span class="value">5,5</span>%</span></span>
+                        <span class="current-amount">-<span class="value">5,5</span>%</span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">В магазин</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-tab" data-target="product">
+            </div>
+            <div class="search-tab" data-target="coupons">
+            </div>
+            <div class="search-tab" data-target="publications">
+            </div>
+            <div class="search-tab" data-target="answers">
+            </div>
+            <div class="show-more">
+              <button class="show-more__btn">Показать еще</button>
+            </div>
+            <div class="loading">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="wrapper">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="#">Помощь</a></li>
+      </ul>
+      <div class="section-title section-title--text-left">
+        <h2 class="section-title__text">Помощь</h2>
+      </div>
+      <div class="section-wrapper">
+        <p class="section-wrapper__title">Задать вопрос</p>
+        <div class="help-ajax__form">
+          <div class="help-ajax__block">
+            <div class="form-content__block">
+              <p class="title">Тема</p>
+              <input type="text" placeholder="Тема вопроса...">
+            </div>
+            <div class="form-content__block">
+              <p class="title">Категория</p>
+              <div class="wrap-drop" id="sort-first">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>Общий вопрос1</a></li>
+                    <li><a>Финансовый вопрос</a></li>
+                    <li><a>Технический вопрос</a></li>
+                    <li><a>Жалоба</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="help-ajax__block">
+            <div class="form-content__block textarea-content">
+              <p class="title">Текст</p>
+              <textarea name="" placeholder="Введите текст..."></textarea>
+            </div>
+            <div class="file-wrapper">
+              <label for="" class="input-dropdown">
+                <input type="file" name="files" class="js-file-uploader">
+                <div class="input-dropdown__text">
+                  <span class="title">Выберите файл</span> 
+                  <span class="text">или перетащите в область</span>
+                </div>
+              </label>
+              <div class="selectedFiles"></div>
+            </div>
+            <button class="btn-blue">отправить</button>
+          </div>
+        </div>
+        <div class="help-history" data-is_new-message="1">
+          <div class="help-history__top">
+            <div class="help-status" data-new-message="5">
+              <i class="far fa-envelope"></i>
+            </div>
+            <div class="history-date">
+              <p>12.09.2018</p>
+            </div>
+            <p class="text">После совершения заказа</p>
+          </div>
+          <div class="help-history__dropdown">
+            <div class="history-dropdown__content">
+              <div class="message-block">
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Вы</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer">
+                <div class="message-block__photo online" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo online" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo online" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo online" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo online" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo online" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-ajax__form">
+              <div class="help-ajax__block">
+                <div class="form-content__block textarea-content">
+                  <textarea name="" placeholder="Введите текст..."></textarea>
+                </div>
+                <div class="file-wrapper">
+                  <label for="" class="input-dropdown">
+                    <input type="file" name="files" class="js-file-uploader">
+                    <div class="input-dropdown__text">
+                      <span class="title">Выберите файл</span> 
+                      <span class="text">или перетащите в область</span>
+                    </div>
+                  </label>
+                  <div class="selectedFiles"></div>
+                </div>
+                <button class="btn-blue">отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="help-history" data-is_new-message="1">
+          <div class="help-history__top">
+            <div class="help-status" data-new-message="7">
+              <i class="far fa-envelope"></i>
+            </div>
+            <div class="history-date">
+              <p>12.09.2018</p>
+            </div>
+            <p class="text">После совершения заказа</p>
+          </div>
+          <div class="help-history__dropdown">
+            <div class="history-dropdown__content">
+              <div class="message-block">
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Вы</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!
+
+                    Спасибо, что поделились информацией.
+
+                    Нам очень жаль, что произошла такая ситуация. Мы не занимаемся обзвоном клиентов и не запрашиваем никаких личных данных, так же как и не можем оформить заказ вместо вас. Кэшбэк - это кэшбэк-сервис, с помощью которого вы можете получить возврат средств с онлайн-покупок. Для получения вознаграждения необходимо иметь действующий аккаунт на нашем сервисе. Процесс начисления кэшбэка прост: вам нужно совершить переход с нашего сайта на сайт одного из магазинов-партнеров и самостоятельно оформить заказ.
+
+                    К сожалению, в данной ситуации вы столкнулись с мошенниками, которые, вероятно, представились нашим именем. Если у вас сохранились контакты мошенников, адрес отправки заказа или банковские реквизиты, рекомендуем незамедлительно обратиться в полицию. Надеемся, что для правоохранительных органов будет достаточно информации, чтобы помочь вам. Пожалуйста, не предоставляйте никакие личные данные, если вы не уверены, кто именно их запрашивает. Будьте осторожны.
+
+                    С уважением, команда Кэшбэк кэшбэк</p>
+                </div>
+              </div>
+              <div class="message-block message-block__answer message-block__new">
+                <div class="message-block__photo" style="background-image: url(../img/answer.png)"></div>
+                <div class="message-block__text">
+                  <div class="message-block__info">
+                    <p class="name">Администратор Раиса</p>
+                    <p class="date">29.09.2018</p>
+                    <p class="time">15:26</p>
+                  </div>
+                  <p class="text">Здравствуйте!</p>
+                </div>
+              </div>
+            </div>
+            <div class="help-ajax__form">
+              <div class="help-ajax__block">
+                <div class="form-content__block textarea-content">
+                  <textarea name="" placeholder="Введите текст..."></textarea>
+                </div>
+                <div class="file-wrapper">
+                  <label for="" class="input-dropdown">
+                    <input type="file" name="files" class="js-file-uploader">
+                    <div class="input-dropdown__text">
+                      <span class="title">Выберите файл</span> 
+                      <span class="text">или перетащите в область</span>
+                    </div>
+                  </label>
+                  <div class="selectedFiles"></div>
+                </div>
+                <button class="btn-blue">отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrapper-center">
+      <div class="footer-content">
+        <span class="title">Покупателю</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item"><a href="#">Реферальная программа</a></li>
+          <li class="footer-content__item"><a href="#">Программа лояльности</a></li>
+          <li class="footer-content__item"><a href="#">Правила покупки с кэшбэком</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Магазинам</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase"><a href="#">Добавить магазин</a></li>
+          <li class="footer-content__item"><a href="#">Партнерская программа</a></li>
+          <li class="footer-content__item"><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Новости</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase">Следить за акциями</li>
+          <li class="footer-content__item">
+            <ul class="social-list">
+              <li class="social-list__item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="social-list__item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="social-list__item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Поддержка</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase"><a href="#">Написать в техподдержку</a></li>
+          <li class="footer-content__item"><a href="mailto:#">kush@help.com</a></li>
+          <li class="footer-content__item"><a href="tel:#">0 (800) 400 30 70 </a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src="../js/script.js"></script>
+
+</body>
+</html>

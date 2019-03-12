@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Document</title>
+    <!-- <link rel="icon" href="" type="image/png"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+</head>
+<body class="pagename-settings">
+  <header class="header authorized">
+    <div class="header-sticky">
+      <div class="header-content">
+        <div class="header-content__img">
+          <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <ul class="list-secondary">
+          <li class="header-list-item"><a href="explanations.html">Как пользоваться?</a></li>
+          <li class="header-list-item"><a href="#">О нас</a></li>
+          <li class="header-list-item"><a href="news.html">Новости</a></li>
+          <li class="header-list-item"><a href="questions.html">Ответы</a></li>
+        </ul>
+        <ul class="list-primary">
+          <li class="header-list-item"><a href="#">Магазины</a></li>
+          <li class="header-list-item"><a href="#">Купоны</a></li>
+          <li class="header-list-item"><a href="reviews.html">Отзывы</a></li>
+        </ul>
+        <div class="header-content__search">
+          <span class="button-hover search-button"><i class="fas fa-search"></i></span>
+          <a class="button-hover notifications-button" href="#">
+            <span class="num-counter">22</span>
+            <i class="far fa-bell"></i>
+          </a>
+          <a class="button-hover interesting-button" href="#">
+            <i class="far fa-heart"></i>
+          </a>
+        </div>
+        <div class="header-content__authorized">
+          <span class="account-price"><span class="num">35 000, 88</span> <span class="currensy">грн</span></span>
+        <!-- class icon -->  <a href="#" class="account-logo" style="background-image: url('');"><i class="far fa-user"></i></a>
+          <div class="authorized-dropdown">
+            <div class="authorized-dropdown__wrapper">
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Реферальная сеть</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Кэшбэк-ссылка</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Кабинет</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Покупки</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Переходы</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Транзакции</a></li>
+              </ul>
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Настройки</a></li>
+                <li class="authorized-dropdown__item"><a href="#">Помощь</a></li>
+              </ul>
+              <ul class="authorized-dropdown__list">
+                <li class="authorized-dropdown__item"><a href="#">Выйти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-content__login">
+          <div class="login-holder">
+            <a href="authentication.html#login">Войти</a>
+            <a href="authentication.html">Зарегистрироваться <i class="far fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-search found"> <!-- found -->
+      <div class="wrapper-center">
+        <div class="form-holder">
+          <form action="" class="modal-form">
+            <input type="text" class="modal-form__input" placeholder="Ищите: магазины, товары, купоны, публикации, ответы">
+            <span class="input-clear">&times;</span>
+          </form>
+        </div>
+        <div class="found-status">
+          <span class="not-found">По вашему запросу ничего не найдено</span>
+          <span class="found">Найдено по вашему запросу:</span>
+        </div>
+        <div class="search-result">
+          <div class="search-result__list">
+            <ul class="search-list header-search__tabs">
+              <li class="search-list__item active" data-quantity="1001" data-target="all">
+                <div class="search-list__bg"></div>
+                <p>Все (<span>1001</span>)</p></li>
+              <li class="search-list__item" data-quantity="1" data-target="shop">
+                <div class="search-list__bg"></div>
+                <p>Магазинов (<span>1</span>)</p></li>
+              <li class="search-list__item" data-quantity="999" data-target="product">
+                <div class="search-list__bg"></div>
+                <p>Товаров (<span>999</span>)</p></li>
+              <li class="search-list__item" data-quantity="99" data-target="coupons">
+                <div class="search-list__bg"></div>
+                <p>Купонов (<span>99</span>)</p></li>
+              <li class="search-list__item" data-quantity="10" data-target="publications">
+                <div class="search-list__bg"></div>
+                <p>Публикаций (<span>10</span>)</p></li>
+              <li class="search-list__item" data-quantity="0" data-target="answers">
+                <div class="search-list__bg"></div>
+                <p>Ответов (<span>0</span>)</p></li>
+            </ul>
+            <div class="search-list-background"></div>
+          </div>
+          <div class="search-result__content js-content__radius">
+            <div class="search-tab active" data-target="all">
+              <div class="search-card">
+                <p class="title">Магазины</p>
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="search-card__amount hot">
+                        <span class="old-amount">до <span>-<span class="value">5,5</span>%</span></span>
+                        <span class="current-amount">-<span class="value">5,5</span>%</span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">В магазин</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-card">
+                <p class="title">Купоны</p>
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-tab" data-target="shop">
+              <div class="search-card">
+                <ul class="search-card__content">
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/shop2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="search-card__amount hot">
+                        <span class="old-amount">до <span>-<span class="value">5,5</span>%</span></span>
+                        <span class="current-amount">-<span class="value">5,5</span>%</span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">В магазин</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="search-card__item active">
+                    <div class="search-card__aligner">
+                      <div class="like-block">
+                        <div class="like-block__button">
+                          <i class="far fa-heart"></i>
+                        </div>
+                        <div class="like-block__img">
+                          <img src="../img/lamoda.png" alt="">
+                        </div>
+                      </div>
+                      <div class="coupon-block">
+                        <div class="coupon-block__amount">
+                          <div class="coupon-amount">
+                            <span class="text"><b>20% </b>скидка на спортивные бренды</span>
+                          </div>
+                        </div>
+                        <div class="coupon-block__time">
+                          <span>Осталось <b class="days">10 <span class="days__text">дней</span></b> (<span>до <span class="month">29.10</span></span>)</span>
+                        </div>
+                      </div>
+                      <div class="promo">
+                        <span class="promo__code">Промокод: <b>не нужен</b></span>
+                      </div>
+                      <div class="search-card__link">
+                        <a href="#">Смотреть товары</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-tab" data-target="product">
+            </div>
+            <div class="search-tab" data-target="coupons">
+            </div>
+            <div class="search-tab" data-target="publications">
+            </div>
+            <div class="search-tab" data-target="answers">
+            </div>
+            <div class="show-more">
+              <button class="show-more__btn">Показать еще</button>
+            </div>
+            <div class="loading">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="wrapper">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+        <li class="breadcrumbs__item">Вопросы и ответы</li>
+      </ul>
+      <div class="section-title section-title--text-left">
+        <h2 class="section-title__text">Настройки</h2>
+      </div>
+      <div class="settings-notifications active">
+        <div class="settings-notifications__block">
+          <span class="icon"><i class="far fa-check-circle"></i></span>
+          <span class="title">Электронная почта успешно изменена</span>
+          <span class="close"><i class="fas fa-times"></i></span>
+        </div>
+      </div>
+      <div class="settings-block">
+        <div class="settings-block__content">
+          <p class="block-title">Настройки профиля</p>
+          <div class="profile-info">
+            <span class="profile-info__id">ID <span>685398</span></span>
+            <span class="acepted"><i class="fas fa-check"></i> Изменения сохранены</span> 
+          </div>
+          <div class="profile-setings">
+            <label class="profile-setings__label" for="">
+              <p class="title">Имя на сайте:</p>
+              <input type="text">
+            </label>
+            <label class="profile-setings__label" for="">
+              <p class="title">Пол:</p>
+              <div class="wrap-drop">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>Не выбран</a></li>
+                    <li><a>Женский</a></li>
+                    <li><a>Мужской</a></li>
+                    <li><a>Другой</a></li>
+                </ul>
+              </div>
+            </label>
+            <label class="profile-setings__label date" for="">
+              <p class="title">Дата рождения:</p>
+              <div class="wrap-drop date">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>----</a></li>
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                </ul>
+              </div>
+              <div class="wrap-drop month">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>----</a></li>
+                    <li><a>Сентябрь</a></li>
+                    <li><a>Октябрь</a></li>
+                    <li><a>Ноябрь</a></li>
+                </ul>
+              </div>
+              <div class="wrap-drop year">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>----</a></li>
+                    <li><a>1953</a></li>
+                    <li><a>980</a></li>
+                    <li><a>1980</a></li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="profile-setings">
+            <label class="profile-setings__label" for="">
+              <p class="title">Имя на сайте:</p>
+              <div class="wrap-drop">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>Общий вопрос1</a></li>
+                    <li><a>Финансовый вопрос</a></li>
+                    <li><a>Технический вопрос</a></li>
+                    <li><a>Жалоба</a></li>
+                </ul>
+              </div>
+            </label>
+            <label class="profile-setings__label" for="">
+              <p class="title">Имя на сайте:</p>
+              <div class="wrap-drop">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>Общий вопрос1</a></li>
+                    <li><a>Финансовый вопрос</a></li>
+                    <li><a>Технический вопрос</a></li>
+                    <li><a>Жалоба</a></li>
+                </ul>
+              </div>
+            </label>
+            <label class="profile-setings__label" for="">
+              <p class="title">Имя на сайте:</p>
+              <div class="wrap-drop">
+                <div class="selected-el"><span></span></div>
+                <ul class="drop">
+                    <li class="selected"><a>Общий вопрос1</a></li>
+                    <li><a>Финансовый вопрос</a></li>
+                    <li><a>Технический вопрос</a></li>
+                    <li><a>Жалоба</a></li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="data">
+            <p class="block-title">Настройки безопасности и входа</p>
+            <p class="block-title__small">Мобильный телефон</p>
+            <div class="data-block phone-change">
+              <label class="profile-setings__label" for="">
+                <p class="title">Телефон:</p>
+                <input type="text">
+                <p class="text"><b>Защитите свой аккаунт при помощи номера телефона.</b> Это повысит безопасность данных и ускорит вывод средств. На указанный номер мы отправим бесплатное СМС-сообщение с кодом подтверждения.</p>
+              </label>
+              <button class="standart-btn phone-change__js"></button> <!-- class= change -->
+              <div class="data-block__dropdown">
+                <label class="profile-setings__label" for="">
+                  <p class="title">Код подтверждения:</p>
+                  <input type="text">
+                  <p class="text">Смс с кодом подтверждения отправлено на ваш номер.</p>
+                </label>
+                <button class="standart-btn phone-change__accept">Подтвердить</button>
+                <div class="repeat">
+                  <span class="counter counter-js">Отправить повторно через <span class="counter__num">00:<span class="counter__num-js">60</span></span></span>
+                  <button class="repeat-button">Отправить повторно</button>
+                </div>
+              </div>
+            </div>
+            <p class="block-title__small">Электронная почта</p>
+            <div class="data-block email-change">
+              <label class="profile-setings__label" for="">
+                <p class="title">Электронная почта:</p>
+                <input type="text" class="read-only__remove" value="123" readonly="">
+              </label>
+              <button class="standart-btn data-js-button fake-class"></button>
+              <button class="standart-btn cancel-js">отменить</button>
+            </div>
+            <p class="block-title__small">Пароль</p>
+            <div class="data-block password-change">
+              <label class="profile-setings__label" for="">
+                <p class="title">Пароль:</p>
+                <input type="password" class="read-only__remove" value="123" readonly="">
+                <p class="text"><b>Убедитесь, что выбрали надёжный пароль.</b> Надежный пароль содержит цифры, буквы и символы. Он не должен легко угадываться или быть похожим на существующее слово.</p>
+                <span class="show-pass">
+                  <i class="fas fa-eye   show"></i>
+                  <i class="fas fa-eye-slash hide"></i>
+                </span>
+              </label>
+              <label class="profile-setings__label" for="">
+                <p class="title">Новый пароль:</p>
+                <input type="password" class="new-pass" >
+              </label>
+              <label class="profile-setings__label" for="">
+                <p class="title">Повторите новый пароль:</p>
+                <input type="password" class="repeat-pass">
+              </label>
+              <div class="button-holder">
+                <button class="standart-btn data-js-button fake-class"></button>
+                <button class="standart-btn cancel-js">отменить</button>
+              </div>
+            </div>
+            <div class="social-account">
+              <p class="block-title__small">Привяжите социальные сети, чтобы входить в аккаунт в 1 клик</p>
+              <span class="social-account__item active">
+                <div class="content-aligner">
+                  <span><i class="fab fa-facebook-f"></i></span>
+                  <p>Facebook</p><br>
+                  <a class="link" href="#"><span>Отвязать</span></a>
+                </div>
+              </span>
+              <span class="social-account__item" onclick="location.href='#'">
+                <div class="content-aligner">
+                  <span><i class="fab fa-google-plus-g"></i></span>
+                  <p>Привязать</p>
+                </div>
+              </span>
+              <span class="social-account__item" onclick="location.href='#'">
+                <div class="content-aligner">
+                  <span><i class="fab fa-vk"></i></span>
+                  <p>Привязать</p>
+                </div>
+              </span>
+            </div>
+            <div class="notifications-setings">
+              <div class="profile-info">
+                <p class="block-title">Настройки уведомлений</p>
+                <span class="acepted"><i class="fas fa-check"></i> Изменения сохранены</span> 
+              </div>
+              <div class="notifications-setings__block">
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="container-agree"><p class="title">О зачислениях кэшбэка</p><p class="text">Появление нового кэшбэка, его подтверждение или отклонение</p></span>
+                </label>
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="container-agree"><p class="title">О действиях рефералов</p><p class="text">Регистрация нового реферала по вашей партнерской ссылке. Получение вознаграждения за заказ реферала</p></span>
+                </label>
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="container-agree"><p class="title">О нововведениях</p><p class="text">Ежемесячно мы присылаем анонсы нововведений на сервисе и новые подключенные магазины</p></span>
+                </label>
+              </div>
+              <div class="notifications-setings__block">
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="container-agree"><p class="title">О зачислениях кэшбэка</p><p class="text">Появление нового кэшбэка, его подтверждение или отклонение</p></span>
+                </label>
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="container-agree"><p class="title">О действиях рефералов</p><p class="text">Регистрация нового реферала по вашей партнерской ссылке. Получение вознаграждения за заказ реферала</p></span>
+                </label>
+                <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  <span class="container-agree"><p class="title">О нововведениях</p><p class="text">Ежемесячно мы присылаем анонсы нововведений на сервисе и новые подключенные магазины</p></span>
+                </label>
+              </div>
+            </div>
+            <div class="finance">
+              <div class="profile-info">
+                <p class="block-title">Настройки финансов</p>
+                <span class="acepted"><i class="fas fa-check"></i> Изменения сохранены</span> 
+              </div>
+              <div class="finance-block">
+                <div class="finance-card finance-card__add">
+                  <span><i class="fas fa-plus"></i></span>
+                  <p>Добавить</p>
+                </div>
+              </div>
+              <div class="card-settings">
+                <div class="card-settings__js">
+                  
+                </div>
+                <div class="cards-block__buttons">
+                  <button class="standart-btn card-settings__cancel">Отменить</button>
+                  <button class="standart-btn card-settings__save">Сохранить</button>
+                  <button class="standart-btn remove-card"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </div>
+              <div class="cards-block">
+                <p class="block-title__small">Добавить способ вывода</p>
+                <ul class="cards-block__list">
+                  <li class="cards-block__item active" data-mode='{"img": "../img/mc.png",
+                   "menu": {"title":"Выбор валюты","selected":"UAH","list":{"0":"RUB","1":"UAH"}}, "fields": {"45":{"name":"person", "title":"Получатель:","hint":""},"35":{"name":"number", "title":"Номер карты:", "hint":"Номер карты должен содержать 16 знаков"},"25":{"name":"name", "title":"Название:", "hint":""}}}'>Visa/MasterCard</li>
+
+                  <li class="cards-block__item" data-mode='{"img": "../img/visa.png","menu": "null", "fields": {"2":{"name":"person", "title":"Получатель:","hint":""},"15":{"name":"number", "title":"Номер карты:", "hint":"Номер карты должен содержать 16 знаков"},"259":{"name":"name", "title":"Название:", "hint":""}}}'>PayPal</li>
+
+                  <li class="cards-block__item" data-mode='{"img": "../img/privat2.png","menu": "null", "fields": {"3":{"name":"person", "title":"Получатель:","hint":""},"16":{"name":"number", "title":"Номер карты:", "hint":"Номер карты должен содержать 16 знаков"},"20":{"name":"name", "title":"Название:", "hint":""}}}'>WebMoney</li>
+
+                  <li class="cards-block__item" data-mode='{"img": "../img/mc.png","menu": "null", "fields": {"4":{"name":"person", "title":"Получатель:","hint":""},"17":{"name":"number", "title":"Номер карты:", "hint":"Номер карты должен содержать 16 знаков"},"21":{"name":"name", "title":"Название:", "hint":""}}}'>Яндекс Деньги</li>
+
+                  <li class="cards-block__item" data-mode='{"img": "../img/sim.png","menu": "null", "fields": {"4":{"name":"name", "title":"Название:","hint":""},"18":{"name":"number", "title":"Телефон:","hint":""}}}'>Мобильный</li>
+                
+                </ul>
+                <div class="cards-block__content"></div>
+                <div class="cards-block__buttons">
+                  <button class="standart-btn cards-block__add">Добавить</button>
+                  <button class="standart-btn cards-block__cansel">отменить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="account-remove">
+            <span class="text">Вы можете</span>
+            <span class="button-js">удалить аккаунт</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="modal-block remove-account">
+      <div class="modal-block__content">
+        <span class="modal-close"><i class="fas fa-times"></i></span>
+        <p class="title">Удалить аккаунт?</p>
+        <p class="text">Удаление аккаунта приведет к потере данных. <br> Восстановить их будет невозможно.</p>
+        <div class="modal-block__buttons">
+          <a href="" class="standart-btn modal-remove">Удалить</a>
+          <button class="standart-btn modal-cancel">Отменить</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-block modal-remove__card">
+      <div class="modal-block__content">
+        <span class="modal-close"><i class="fas fa-times"></i></span>
+        <p class="title">Удалить карту?</p>
+        <p class="text">Удаление карты приведет к потере данных. <br> Восстановить их будет невозможно.</p>
+        <div class="modal-block__buttons">
+          <a href="" class="standart-btn modal-remove">Удалить</a>
+          <button class="standart-btn modal-cancel">Отменить</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-center">
+      <div class="footer-content">
+        <span class="title">Покупателю</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item"><a href="#">Реферальная программа</a></li>
+          <li class="footer-content__item"><a href="#">Программа лояльности</a></li>
+          <li class="footer-content__item"><a href="#">Правила покупки с кэшбэком</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Магазинам</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase"><a href="#">Добавить магазин</a></li>
+          <li class="footer-content__item"><a href="#">Партнерская программа</a></li>
+          <li class="footer-content__item"><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Новости</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase">Следить за акциями</li>
+          <li class="footer-content__item">
+            <ul class="social-list">
+              <li class="social-list__item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="social-list__item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="social-list__item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <span class="title">Поддержка</span>
+        <ul class="footer-content__list">
+          <li class="footer-content__item item--uppercase"><a href="#">Написать в техподдержку</a></li>
+          <li class="footer-content__item"><a href="mailto:#">kush@help.com</a></li>
+          <li class="footer-content__item"><a href="tel:#">0 (800) 400 30 70 </a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
